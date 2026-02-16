@@ -129,9 +129,11 @@ app.registerExtension({
         const keys = Object.keys(data);
 
         const idx = node.widgets?.findIndex(w => w.name === "Secret") ?? -1;
+        const savedValue = idx >= 0 ? node.widgets[idx].value : undefined;
         if (idx >= 0) node.widgets.splice(idx, 1);
 
-        node.addWidget("combo", "Secret", keys[0] ?? "", () => {}, { values: keys });
+        const defaultValue = (savedValue && keys.includes(savedValue)) ? savedValue : (keys[0] ?? "");
+        node.addWidget("combo", "Secret", defaultValue, () => {}, { values: keys });
 
         node.addWidget("button", "Edit Secrets", null, async () => {
             const r = await api.fetchApi("/comfyui-secrets", { method: "GET" });
