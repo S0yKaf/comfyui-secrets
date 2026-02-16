@@ -1,0 +1,6 @@
+[project]
+name = "comfyui-secrets"
+version = "0.1.0"
+description = "Simple node to manage API keys and secrets for OpenAI, Anthropic, OpenRouter, Stability AI, etc... Allows you to keep your secrets out of your workflows. Zero Deps"
+readme = "README.md"
+dependencies = []
