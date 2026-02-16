@@ -10,3 +10,4 @@ wheels/
 .venv
 .vscode
 secrets.json
+node.zip
