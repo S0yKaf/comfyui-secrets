@@ -3,4 +3,14 @@ name = "comfyui-secrets"
 version = "0.1.0"
 description = "Simple node to manage API keys and secrets for OpenAI, Anthropic, OpenRouter, Stability AI, etc... Allows you to keep your secrets out of your workflows. Zero Deps"
 readme = "README.md"
+license = {file = "LICENSE.md"}
 dependencies = []
+
+
+[project.urls]
+Repository = "https://github.com/S0yKaf/comfyui-secrets"
+
+[tool.comfy]
+PublisherId = "soykaf"
+DisplayName = "ComfyUI-Secrets"
+Icon = ""
